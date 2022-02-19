@@ -1,17 +1,23 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
+const corsOptions = {
+    origin: 'https://person-table-test.herokuapp.com/',
+    optionsSuccessStatus: 200
+}
+
+app.get('/', cors(corsOptions), (req, res) => {
     res.send('Hello World!')
 })
-app.put('/', (req, res) => {
+app.put('/', cors(corsOptions), (req, res) => {
     res.send('Hello World!')
 })
-app.post('/', (req, res) => {
+app.post('/', cors(corsOptions), (req, res) => {
     res.send('Hello World!')
 })
-app.delete('/', (req, res) => {
+app.delete('/', cors(corsOptions), (req, res) => {
     res.send('Hello World!')
 })
 
