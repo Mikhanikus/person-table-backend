@@ -2,6 +2,7 @@ var express = require('express');
 const {db} = require("../database/db");
 var router = express.Router();
 
+
 router.get('/api', async function(req, res) {
   if (Object.keys(req.body).length === 0) {
     db(`SELECT * FROM person;
