@@ -4,7 +4,7 @@ const cors = require('cors')
 var router = express.Router();
 
 const corsOptions = {
-  origin: 'https://person-table-test.herokuapp.com/',
+  origin: 'https://person-table-test.herokuapp.com',
   optionsSuccessStatus: 200
 }
 
