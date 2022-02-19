@@ -3,11 +3,12 @@
 /**
  * Module dependencies.
  */
-
+var cors = require('cors')
 var app = require('../app');
+app().options('*', cors())
+
 var debug = require('debug')('person-backend:server');
 var http = require('http');
-
 /**
  * Get port from environment and store in Express.
  */
