@@ -24,10 +24,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use(cors({
-  origin: 'https://person-table-test.herokuapp.com',
-  methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
-}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

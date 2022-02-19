@@ -14,10 +14,6 @@ const cors = require("cors");
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
-app.use(cors({
-  origin: 'https://person-table-test.herokuapp.com',
-  methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
-}));
 
 /**
  * Create HTTP server.
