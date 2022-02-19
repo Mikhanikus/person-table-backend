@@ -3,18 +3,20 @@
 /**
  * Module dependencies.
  */
-var cors = require('cors')
 var app = require('../app');
-app().options('*', cors())
 
 var debug = require('debug')('person-backend:server');
 var http = require('http');
+const cors = require("cors");
 /**
  * Get port from environment and store in Express.
  */
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+app.use(cors({
+  origin: 'https://person-table-test.herokuapp.com/'
+}));
 
 /**
  * Create HTTP server.
