@@ -9,7 +9,6 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
-app.options('https://person-table-test.herokuapp.com', cors())
 
 
 

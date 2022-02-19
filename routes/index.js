@@ -2,6 +2,7 @@ var express = require('express');
 const {db} = require("../database/db");
 var router = express.Router();
 var cors = require('cors')
+router.all('*', cors())
 
 var allowlist = ['https://person-table-test.herokuapp.com']
 var corsOptionsDelegate = function (req, callback) {
